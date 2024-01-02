@@ -8,10 +8,18 @@ This tedious image analysis process inspired me to delve into my next research p
 - Structural SIMilarity index -- scikit-image's SSIM
 
 **comparison baselines**
-each image was compared to...
-- the first image in the batch (2 batches per day since I downloaded images twice a day)
-  - usually no roaches since the roaches were afraid when I came in to take the phone and download images
-- the previous image
-- the median image
+each image was compared to three baseline images
+- the first image in the batch 
+  - pros: usually no roaches since I turned on the room light when I came in to download a batch (twice a day), so detected all images with a roach
+  - cons: slight changes in ambient lighting levels caused false hits
+- the previous image (images are taken once a minute):
+  - pros: less sensitive to ambient lighting changes
+  - cons: does not check first image (which has no previous image)
+- the median image:
+  - pros: most images don’t have cockroaches eating, so the median will not have any cockroaches.
+    Also, since the median is the most common, most pictures will not have any irrelevant changes.
+  
 
 **AutonomousCockroachDetectingAlgorithmPoster.pdf:** poster from my presentation at the Pittsburgh Regional Science and Engineering Fair where I won 1st place in the Computer Science Intermediate division and the Intermediate Division Carnegie Science Award.
+
+As the poster indicates, combining different methods and baselines improved performance, which was my first foray into sensor fusion.
