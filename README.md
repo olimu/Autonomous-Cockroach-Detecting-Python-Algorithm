@@ -22,4 +22,4 @@ each image was compared to three baseline images
 
 **AutonomousCockroachDetectingAlgorithmPoster.pdf:** poster from my presentation at the Pittsburgh Regional Science and Engineering Fair where I won 1st place in the Computer Science Intermediate division and the Intermediate Division Carnegie Science Award.
 
-As the poster indicates, combining different methods and baselines improved performance, which was my first foray into sensor fusion.
+As the poster indicates, combining different methods and baselines improved performance. The success of this computer vision approach led me to apply more complex neural networks to tackle this image analysis problem the next year (Cockroach-Detecting-Neural-Network Repository).
